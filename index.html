@@ -1,0 +1,994 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>McKnight | Builders, Homes and Lettings in Carlisle since 1965</title>
+<meta name="description" content="McKnight &amp; Son are an independent, family run Carlisle builder. Luxury new homes, quality lettings, student accommodation and construction services across Cumbria since 1965.">
+<meta name="theme-color" content="#24272b">
+<link rel="icon" href="assets/logos/mcknight-stamp-dark.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Libre+Caslon+Text:ital@0;1&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="assets/video/hero-poster.webp">
+<style>
+:root{
+  --ink:#24272b;
+  --charcoal:#303337;
+  --gold:#bca676;
+  --gold-deep:#76643a;
+  --paper:#f6f2ea;
+  --stone:#e8e1d3;
+  --line:#d6cdb9;
+  --text:#2a2c30;
+  --muted:#55585e;
+  --white:#fff;
+  --display:"Libre Caslon Display", Georgia, "Times New Roman", serif;
+  --serif:"Libre Caslon Text", Georgia, "Times New Roman", serif;
+  --sans:"Work Sans", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --wrap:1240px;
+  --gutter:clamp(20px,4vw,48px);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+body{margin:0;font-family:var(--sans);font-size:1.0625rem;line-height:1.65;color:var(--text);background:var(--paper)}
+img,svg,video{display:block;max-width:100%}
+img{height:auto}
+a{color:inherit}
+h1,h2,h3,h4{font-weight:400;margin:0;line-height:1.12;color:var(--ink)}
+h2{font-family:var(--display);font-size:clamp(2.1rem,4.2vw,3.4rem);letter-spacing:-.01em}
+h3{font-family:var(--serif);font-size:1.45rem}
+p{margin:0 0 1em}
+.wrap{max-width:var(--wrap);margin-inline:auto;padding-inline:var(--gutter)}
+.sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.skip{position:absolute;left:16px;top:-80px;z-index:200;background:var(--gold);color:var(--ink);padding:12px 18px;font-weight:600;text-decoration:none}
+.skip:focus{top:16px}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.on-light :focus-visible,.on-light:focus-visible{outline-color:var(--gold-deep)}
+
+/* eyebrow: plain small caps text with a rule, no container */
+.eyebrow{display:flex;align-items:center;gap:14px;font-size:.78rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:22px}
+.eyebrow::before{content:"";width:36px;height:1px;background:currentColor}
+.dark .eyebrow{color:var(--gold)}
+
+.btn{display:inline-flex;align-items:center;gap:12px;min-height:52px;padding:0 28px;font:600 .9rem/1 var(--sans);letter-spacing:.08em;text-transform:uppercase;text-decoration:none;border:1px solid transparent;cursor:pointer;transition:background .25s,color .25s,border-color .25s}
+.btn-gold{background:var(--gold);color:var(--ink)}
+.btn-gold:hover{background:#cdb98b}
+.btn-ghost{border-color:rgba(255,255,255,.7);color:#fff;background:transparent}
+.btn-ghost:hover{background:#fff;color:var(--ink)}
+.btn-dark{background:var(--ink);color:#fff}
+.btn-dark:hover{background:var(--charcoal)}
+.link{display:inline-flex;align-items:center;gap:10px;font-weight:600;font-size:.9rem;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;color:var(--ink);border-bottom:1px solid var(--gold);padding-bottom:4px}
+.link svg{width:18px;height:18px;transition:transform .25s}
+.link:hover svg{transform:translateX(4px)}
+.dark .link{color:#fff}
+
+/* ===== header ===== */
+.site-header{position:absolute;inset:0 0 auto;z-index:50;color:#fff}
+.topbar{font-size:.85rem;border-bottom:1px solid rgba(255,255,255,.18)}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;min-height:42px;gap:16px}
+.topbar a{text-decoration:none}
+.topbar a:hover{text-decoration:underline}
+.topbar .tag{letter-spacing:.2em;text-transform:uppercase;font-size:.72rem;opacity:.9}
+.nav{display:flex;align-items:center;justify-content:space-between;min-height:92px;gap:24px}
+.brand img{width:200px;height:auto}
+.menu{display:flex;gap:clamp(16px,2.2vw,34px);list-style:none;margin:0;padding:0}
+.menu a{white-space:nowrap;font-size:.82rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;padding:8px 0;border-bottom:1px solid transparent}
+.menu a:hover,.menu a[aria-current="page"]{border-color:var(--gold)}
+.menu-toggle{display:none;background:none;border:0;color:#fff;padding:10px;cursor:pointer}
+.menu-toggle svg{width:32px;height:32px}
+@media (max-width:1120px){
+  .menu-toggle{display:block}
+  .menu{position:fixed;inset:0;flex-direction:column;justify-content:center;align-items:center;gap:22px;background:var(--ink);transform:translateX(100%);visibility:hidden;transition:transform .35s,visibility 0s .35s;z-index:60}
+  .menu.open{transform:none;visibility:visible;transition:transform .35s}
+  .menu a{font-size:1.1rem}
+  .menu-toggle[aria-expanded="true"]{position:relative;z-index:70}
+  .topbar .tag{display:none}
+}
+
+/* ===== hero ===== */
+.hero{position:relative;height:100vh;height:100svh;min-height:560px;display:grid;place-items:center;text-align:center;color:#fff;overflow:hidden;background:var(--ink) url("assets/video/hero-poster.webp") center/cover no-repeat}
+.hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,22,25,.72) 0%,rgba(20,22,25,.5) 38%,rgba(20,22,25,.55) 70%,rgba(20,22,25,.78) 100%)}
+.hero-inner{position:relative;z-index:2;max-width:900px;padding:140px var(--gutter) 80px;display:flex;flex-direction:column;align-items:center}
+.hero .eyebrow{color:#d3c196;justify-content:center;margin-bottom:28px;text-shadow:0 1px 12px rgba(0,0,0,.5)}
+@media (max-width:560px){.hero .eyebrow{letter-spacing:.14em;font-size:.72rem}.hero .eyebrow::before,.hero .eyebrow::after{width:20px}}
+.hero .eyebrow::after{content:"";width:36px;height:1px;background:currentColor}
+.hero h1{font-family:var(--display);font-size:clamp(2.8rem,7.4vw,6.2rem);line-height:1.02;color:#fff;letter-spacing:-.015em;text-shadow:0 2px 30px rgba(0,0,0,.25)}
+.hero p{font-size:clamp(1.05rem,1.6vw,1.25rem);max-width:620px;margin:28px auto 40px;color:rgba(255,255,255,.92)}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
+.video-toggle{position:absolute;z-index:3;right:var(--gutter);bottom:28px;display:flex;align-items:center;gap:10px;background:none;border:0;color:#fff;font:500 .78rem var(--sans);letter-spacing:.16em;text-transform:uppercase;cursor:pointer;padding:10px 0}
+.video-toggle svg{width:28px;height:28px}
+
+/* ===== intro / stats ===== */
+.section{padding-block:clamp(80px,11vw,150px)}
+.intro-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(40px,7vw,110px);align-items:end}
+.intro-grid .lead{font-family:var(--serif);font-size:clamp(1.25rem,2vw,1.6rem);line-height:1.5;color:var(--ink)}
+.stats{list-style:none;padding:0;margin-bottom:0;display:grid;grid-template-columns:repeat(4,1fr);margin-top:clamp(56px,7vw,96px);border-top:1px solid var(--line)}
+.stat{padding:34px 24px 0 0}
+.stat + .stat{padding-left:28px;border-left:1px solid var(--line)}
+.stat b{display:block;font-family:var(--display);font-weight:400;font-size:clamp(2.6rem,5vw,4.2rem);line-height:1;color:var(--ink)}
+.stat span{display:block;margin-top:12px;font-size:.8rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+@media (max-width:860px){.intro-grid{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr}.stat:nth-child(3){border-left:0;padding-left:0}.stat{padding-bottom:30px}}
+
+/* ===== about ===== */
+.about{display:grid;grid-template-columns:1fr 1fr;min-height:640px;background:var(--stone)}
+.about figure{margin:0;position:relative}
+.about figure img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.about .copy{padding:clamp(56px,8vw,120px) clamp(24px,6vw,96px);align-self:center;max-width:680px}
+.about h2{margin-bottom:28px}
+.about .stamp{width:150px;margin-top:36px}
+@media (max-width:900px){.about{grid-template-columns:1fr}.about figure{aspect-ratio:4/3}}
+
+/* ===== services ===== */
+.dark{background:var(--ink);color:rgba(255,255,255,.86)}
+.dark h2,.dark h3{color:#fff}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:40px;margin-bottom:clamp(48px,6vw,80px)}
+.section-head p{max-width:440px;margin:0}
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(32px,4vw,64px)}
+.service .icon{width:64px;height:64px;color:var(--gold);margin-bottom:28px}
+.service h3{margin-bottom:14px}
+.service p{margin-bottom:24px}
+.service figure{margin:0 0 30px;aspect-ratio:4/3;overflow:hidden}
+.service figure img{width:100%;height:100%;object-fit:cover;transition:transform .8s}
+.service:hover figure img{transform:scale(1.04)}
+@media (max-width:900px){.services{grid-template-columns:1fr}.section-head{flex-direction:column;align-items:start}}
+
+/* ===== developments ===== */
+.dev{display:grid;grid-template-columns:repeat(12,1fr);gap:24px;align-items:center;margin-bottom:clamp(64px,9vw,120px)}
+.dev:last-child{margin-bottom:0}
+.dev .media{grid-column:1 / span 7;position:relative}
+.dev .media img{width:100%;aspect-ratio:3/2;object-fit:cover}
+.dev .media .inset{position:absolute;right:-8%;bottom:-12%;width:42%;border:8px solid var(--paper);aspect-ratio:1;object-fit:cover}
+.dev .body{grid-column:9 / span 4}
+.dev.flip .media{grid-column:6 / span 7;order:2}
+.dev.flip .media .inset{right:auto;left:-8%}
+.dev.flip .body{grid-column:1 / span 4;order:1}
+.dev h3{font-family:var(--display);font-size:clamp(1.9rem,3vw,2.6rem);margin-bottom:8px}
+.status{display:block;font-size:.8rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:22px}
+.facts{list-style:none;margin:26px 0 30px;padding:0;border-top:1px solid var(--line)}
+.facts li{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid var(--line);font-size:.95rem}
+.facts li span:first-child{color:var(--muted)}
+.facts li span:last-child{font-weight:500;text-align:right}
+@media (max-width:900px){.dev .media,.dev.flip .media,.dev .body,.dev.flip .body{grid-column:1 / -1;order:0}.dev .media .inset{display:none}}
+
+.plots{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:clamp(56px,7vw,90px)}
+.plot{background:#fff;padding:28px;border-top:3px solid var(--gold)}
+.plot h4{font-family:var(--serif);font-size:1.25rem;margin-bottom:6px}
+.plot p{margin:0;color:var(--muted);font-size:.95rem}
+.plot strong{display:block;margin-top:14px;font-weight:600;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-deep)}
+@media (max-width:800px){.plots{grid-template-columns:1fr}}
+
+/* ===== construction ===== */
+.cons-top{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,7vw,110px);margin-bottom:clamp(56px,7vw,96px)}
+.trade-list{columns:3;column-gap:32px;list-style:none;padding:0;margin:30px 0 0}
+.trade-list li{padding:10px 0;border-bottom:1px solid rgba(255,255,255,.14);break-inside:avoid;font-family:var(--serif);font-size:1.08rem;color:#fff}
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(32px,4vw,64px);padding-top:clamp(48px,6vw,72px);border-top:1px solid rgba(255,255,255,.14)}
+.pillar{display:flex;gap:22px;align-items:flex-start}
+.pillar .icon{flex:0 0 auto;width:60px;height:60px;color:var(--gold)}
+.pillar h3{font-size:1.3rem;margin-bottom:10px}
+.pillar p{margin:0;font-size:.98rem}
+@media (max-width:900px){.cons-top,.pillars{grid-template-columns:1fr}.trade-list{columns:2}}
+
+/* ===== portfolio ===== */
+.portfolio{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:minmax(200px,auto);gap:16px}
+.work{position:relative;margin:0;overflow:hidden;background:var(--charcoal);color:#fff;min-height:320px}
+.work img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .9s}
+.work:hover img{transform:scale(1.04)}
+.work figcaption{position:absolute;inset:auto 0 0;padding:90px 28px 26px;background:linear-gradient(180deg,transparent,rgba(16,17,19,.88))}
+.work h3{color:#fff;font-size:1.35rem;margin-bottom:6px}
+.work p{margin:0;font-size:.93rem;color:rgba(255,255,255,.88);max-width:560px}
+.w-a{grid-column:span 4;grid-row:span 2;min-height:560px}
+.w-b{grid-column:span 2;grid-row:span 2}
+.w-c,.w-d,.w-e{grid-column:span 2}
+.more-work{list-style:none;padding:0;margin:clamp(40px,5vw,64px) 0 0;display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(24px,4vw,56px)}
+.more-work li{border-top:1px solid var(--line);padding-top:22px}
+.more-work h3{font-size:1.2rem;margin-bottom:8px}
+.more-work p{margin:0;font-size:.95rem;color:var(--muted)}
+@media (max-width:900px){.more-work{grid-template-columns:1fr}}
+@media (max-width:900px){.portfolio{grid-template-columns:1fr}.w-a,.w-b,.w-c,.w-d,.w-e{grid-column:auto;grid-row:auto;min-height:380px}}
+
+/* ===== lettings ===== */
+.lettings{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.let{background:#fff;display:flex;flex-direction:column}
+.let img{aspect-ratio:4/3;object-fit:cover;width:100%}
+.let .inner{padding:26px 24px 30px;display:flex;flex-direction:column;flex:1}
+.let h3{font-size:1.25rem;margin-bottom:10px}
+.let p{font-size:.95rem;color:var(--muted)}
+.let .link{margin-top:auto;align-self:flex-start}
+@media (max-width:1020px){.lettings{grid-template-columns:1fr 1fr}}
+@media (max-width:620px){.lettings{grid-template-columns:1fr}}
+
+.listings{margin-top:clamp(56px,7vw,90px)}
+.listings h3{font-family:var(--display);font-size:1.8rem;margin-bottom:20px}
+.table-wrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:.97rem;min-width:620px}
+caption{text-align:left}
+th,td{text-align:left;padding:16px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+thead th{font-size:.76rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);font-weight:600}
+tbody th{font-weight:500;font-family:var(--serif);font-size:1.05rem}
+td.price{white-space:nowrap;font-weight:600}
+
+/* ===== students ===== */
+.students{display:grid;grid-template-columns:5fr 7fr;gap:clamp(40px,7vw,110px);align-items:start}
+.students .media{position:sticky;top:40px}
+.students .media img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.features{display:grid;grid-template-columns:1fr 1fr;gap:44px 48px;margin-top:48px}
+.feature .icon{width:56px;height:56px;color:var(--gold-deep);margin-bottom:18px}
+.feature h3{font-size:1.2rem;margin-bottom:8px}
+.feature p{margin:0;font-size:.96rem;color:var(--muted)}
+@media (max-width:900px){.students{grid-template-columns:1fr}.students .media{position:static}.students .media img{aspect-ratio:3/2}}
+@media (max-width:560px){.features{grid-template-columns:1fr}}
+
+/* ===== reviews ===== */
+.reviews{display:grid;grid-template-columns:repeat(12,1fr);gap:24px}
+.review{margin:0;padding:clamp(28px,3vw,44px);background:var(--charcoal);display:flex;flex-direction:column}
+.review .q{width:44px;height:44px;color:var(--gold);margin-bottom:22px}
+.review blockquote{margin:0 0 26px;font-family:var(--serif);font-size:1.12rem;line-height:1.6;color:#fff}
+.review figcaption{margin-top:auto;font-size:.82rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.review figcaption span{display:block;font-weight:400;letter-spacing:.04em;text-transform:none;color:rgba(255,255,255,.75);font-size:.9rem;margin-top:4px}
+.r-1,.r-2{grid-column:span 6}
+.r-3,.r-4,.r-5{grid-column:span 4}
+@media (max-width:900px){.r-1,.r-2,.r-3,.r-4,.r-5{grid-column:1 / -1}}
+
+/* ===== news ===== */
+.news{display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
+.post{display:flex;flex-direction:column}
+.post img{aspect-ratio:4/3;object-fit:cover;width:100%;margin-bottom:22px}
+.post time{font-size:.78rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-deep)}
+.post h3{font-size:1.2rem;margin:10px 0 12px}
+.post h3 a{text-decoration:none}
+.post h3 a:hover{text-decoration:underline;text-decoration-color:var(--gold);text-underline-offset:4px}
+.post p{font-size:.95rem;color:var(--muted);margin:0}
+@media (max-width:1020px){.news{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.news{grid-template-columns:1fr}}
+
+/* ===== accreditations ===== */
+.accred{background:var(--charcoal);padding-block:56px}
+.accred .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:36px}
+.accred h2{font-family:var(--sans);font-size:.8rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
+.accred ul{display:flex;flex-wrap:wrap;align-items:center;gap:clamp(28px,5vw,64px);list-style:none;margin:0;padding:0}
+.accred img{height:64px;width:auto}
+.accred .tpo{height:46px;background:#fff;padding:6px 10px}
+
+/* ===== contact ===== */
+.contact{display:grid;grid-template-columns:5fr 7fr;gap:clamp(40px,7vw,110px)}
+.contact-list{list-style:none;padding:0;margin:40px 0 0;display:grid;gap:30px}
+.contact-list li{display:flex;gap:20px;align-items:flex-start}
+.contact-list .icon{flex:0 0 auto;width:40px;height:40px;color:var(--gold-deep)}
+.contact-list h3{font-family:var(--sans);font-size:.78rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.contact-list p{margin:0}
+.contact-list a{text-decoration-color:var(--gold);text-underline-offset:3px}
+form{background:#fff;padding:clamp(28px,4vw,56px)}
+.field{margin-bottom:22px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+label,legend{display:block;font-size:.88rem;font-weight:600;margin-bottom:8px;color:var(--ink)}
+.req{color:#8a2a1c;font-weight:500}
+input,select,textarea{width:100%;font:inherit;font-size:1rem;color:var(--text);background:var(--paper);border:1px solid #8f8774;border-radius:0;padding:14px 16px;min-height:52px}
+textarea{min-height:150px;resize:vertical}
+input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--gold-deep);outline-offset:1px;border-color:var(--ink)}
+[aria-invalid="true"]{border-color:#a3301f;border-width:2px}
+.error{display:none;color:#a3301f;font-size:.88rem;margin-top:6px}
+.error.show{display:block}
+.form-note{font-size:.88rem;color:var(--muted);margin:18px 0 0}
+.form-status{margin-top:18px;font-weight:500}
+@media (max-width:900px){.contact{grid-template-columns:1fr}}
+@media (max-width:560px){.row{grid-template-columns:1fr}}
+
+/* ===== footer ===== */
+footer{background:var(--ink);color:rgba(255,255,255,.8);padding:clamp(64px,8vw,100px) 0 32px;font-size:.95rem}
+.foot{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.3fr;gap:40px}
+.foot img.logo{width:190px;margin-bottom:24px}
+.foot h2{font-family:var(--sans);font-size:.78rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:18px}
+.foot ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.foot a{text-decoration:none}
+.foot a:hover{text-decoration:underline;text-decoration-color:var(--gold)}
+.foot address{font-style:normal;line-height:1.7}
+.social{display:flex;gap:18px;margin-top:24px}
+.social a{color:#fff;display:block;padding:4px}
+.social svg{width:26px;height:26px}
+.legal{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;border-top:1px solid rgba(255,255,255,.14);margin-top:64px;padding-top:28px;font-size:.85rem;color:rgba(255,255,255,.7)}
+.legal button{background:none;border:0;color:inherit;font:inherit;text-decoration:underline;cursor:pointer;padding:0}
+@media (max-width:900px){.foot{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.foot{grid-template-columns:1fr}}
+
+/* ===== cookie panel (side) ===== */
+.cookie{position:fixed;left:24px;bottom:24px;z-index:120;width:min(380px,calc(100vw - 32px));background:#fff;color:var(--text);box-shadow:0 18px 50px rgba(0,0,0,.25);border-left:4px solid var(--gold);padding:28px 26px 24px;transform:translateX(-120%);transition:transform .45s ease}
+.cookie.show{transform:none}
+.cookie[hidden]{display:none}
+.cookie h2{font-family:var(--serif);font-size:1.3rem;margin-bottom:10px}
+.cookie p{font-size:.92rem;color:var(--muted);margin-bottom:18px}
+.cookie .actions{display:flex;flex-wrap:wrap;gap:10px}
+.cookie .btn{min-height:46px;padding:0 18px;font-size:.78rem}
+.cookie .btn-line{background:#fff;border-color:var(--ink);color:var(--ink)}
+.cookie .btn-line:hover{background:var(--paper)}
+.prefs{border:0;margin:0 0 18px;padding:0}
+.prefs legend{font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.pref{display:flex;align-items:flex-start;gap:12px;padding:10px 0;border-top:1px solid var(--stone)}
+.pref input{width:22px;height:22px;min-height:0;margin:2px 0 0;accent-color:var(--ink);flex:0 0 auto}
+.pref label{margin:0;font-weight:600;font-size:.92rem}
+.pref small{display:block;font-weight:400;color:var(--muted);font-size:.84rem}
+@media (max-width:560px){.cookie{left:16px;right:16px;bottom:16px;width:auto}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+
+<!-- icon sprite -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-student" viewBox="0 0 64 64"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"><path d="M4 24 32 12l28 12-28 12z"/><path d="M16 29.5V43c0 4 7.2 8 16 8s16-4 16-8V29.5"/><path d="M60 24v14"/><circle cx="60" cy="41" r="2.5"/></g></symbol>
+    <symbol id="i-key" viewBox="0 0 64 64"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"><circle cx="20" cy="40" r="11"/><circle cx="20" cy="40" r="3.5"/><path d="M28 32 52 8M44 16l6 6M38 22l5 5"/><path d="M8 58h48"/></g></symbol>
+    <symbol id="i-crane" viewBox="0 0 64 64"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"><path d="M18 58V10h6v48M14 58h14"/><path d="M18 10 21 4l3 6"/><path d="M24 14h34v5H8v-5h10"/><path d="M18 22l6 6M24 22l-6 6M18 34l6 6M24 34l-6 6M18 46l6 6M24 46l-6 6"/><path d="M50 19v14"/><path d="M45 33h10v8H45z"/><path d="M10 19v8h6"/></g></symbol>
+    <symbol id="i-plans" viewBox="0 0 64 64"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"><path d="M8 12h40a4 4 0 0 1 4 4v38H12a4 4 0 0 1-4-4z"/><path d="M8 12v38a4 4 0 0 0 4 4"/><path d="M18 22h24v22H18zM30 22v10h12M18 36h8"/><path d="M52 24l6-6 4 4-6 6"/><path d="M56 28 44 40l-5 1 1-5 12-12"/></g></symbol>
+    <symbol id="i-wrench" viewBox="0 0 64 64"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"><path d="M40.5 8.5a13 13 0 0 0-14 17.5L8 44.5a5.5 5.5 0 0 0 7.8 7.8L34.2 34a13 13 0 0 0 17.4-14.2l-7.8 7.8-7.2-1.8-1.8-7.2z"/><circle cx="12.5" cy="48" r="1.5"/></g></symbol>
+    <symbol id="i-extension" viewBox="0 0 64 64"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"><path d="M4 28 22 12l18 16"/><path d="M8 25v31h28V25"/><path d="M18 56V42h8v14"/><path d="M36 36h22v20H36"/><path d="M36 36l11-9 11 9" stroke-dasharray="3 3"/><path d="M44 46h6v10"/></g></symbol>
+    <symbol id="i-support" viewBox="0 0 64 64"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"><path d="M10 36v-6a22 22 0 0 1 44 0v6"/><path d="M10 34h7v14h-7a3 3 0 0 1-3-3v-8a3 3 0 0 1 3-3zM54 34h-7v14h7a3 3 0 0 0 3-3v-8a3 3 0 0 0-3-3z"/><path d="M50 48c0 6-6 9-14 9"/><rect x="28" y="54" width="8" height="5" rx="2"/></g></symbol>
+    <symbol id="i-sofa" viewBox="0 0 64 64"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"><path d="M12 30v-8a6 6 0 0 1 6-6h28a6 6 0 0 1 6 6v8"/><path d="M8 30a4 4 0 0 1 4 4v6h40v-6a4 4 0 1 1 8 0v12a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4V34a4 4 0 0 1 4-4z"/><path d="M12 50v6M52 50v6M32 16v24"/></g></symbol>
+    <symbol id="i-bills" viewBox="0 0 64 64"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"><path d="M14 6h36v52l-6-4-6 4-6-4-6 4-6-4-6 4z"/><path d="M38 20a6 6 0 0 0-10 4.5V36M24 30h10M24 42h14"/><path d="M28 36c0 3-2 6-4 6"/></g></symbol>
+    <symbol id="i-wifi" viewBox="0 0 64 64"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 24a37 37 0 0 1 52 0"/><path d="M14 33a26 26 0 0 1 36 0"/><path d="M22 42a14.5 14.5 0 0 1 20 0"/><circle cx="32" cy="51" r="3" fill="currentColor" stroke="none"/></g></symbol>
+    <symbol id="i-cctv" viewBox="0 0 64 64"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"><path d="M6 16 46 28l-4 12L4 28z"/><path d="M46 28l6 2-3 9-7-2"/><path d="M22 36l-3 10H8M8 40v12"/><circle cx="12" cy="24" r="1.5"/><path d="M50 44l6 2M48 50l5 4"/></g></symbol>
+    <symbol id="i-modern" viewBox="0 0 64 64"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"><rect x="10" y="6" width="44" height="52" rx="3"/><path d="M10 16h44"/><circle cx="32" cy="37" r="13"/><path d="M24 39c3-3 6 2 9 0s5-3 8-1"/><circle cx="17" cy="11" r="1.2"/><circle cx="23" cy="11" r="1.2"/></g></symbol>
+    <symbol id="i-kitchen" viewBox="0 0 64 64"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"><rect x="8" y="22" width="48" height="36" rx="2"/><path d="M8 34h48M32 22v36M14 28h4M38 28h4M14 40v10M50 40v10"/><path d="M18 22V10a4 4 0 0 1 8 0M44 22v-8M40 14h8"/></g></symbol>
+    <symbol id="i-clean" viewBox="0 0 64 64"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"><path d="M14 26h28l-3 32H17z"/><path d="M12 26a16 9 0 0 1 32 0"/><path d="M28 17V6"/><path d="M48 8l2 5 5 2-5 2-2 5-2-5-5-2 5-2z"/><path d="M20 38h16"/></g></symbol>
+    <symbol id="i-quote" viewBox="0 0 48 48"><path fill="currentColor" d="M6 38V26c0-9.4 4.6-16 13-19l1.6 3.2C15.4 12.6 13 16.4 13 21h7v17zm22 0V26c0-9.4 4.6-16 13-19l1.6 3.2C37.4 12.6 35 16.4 35 21h7v17z"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 48 48"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M14 5l6 9-4 4c2 5 6 9 11 11l4-4 9 6-3 7c-1 2-3 3-5 2C19 37 11 29 8 16c-1-2 0-4 2-5z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="5" y="10" width="38" height="28" rx="2"/><path d="M6 12l18 14 18-14"/></g></symbol>
+    <symbol id="i-pin" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M24 44S9 29 9 19a15 15 0 0 1 30 0c0 10-15 25-15 25z"/><circle cx="24" cy="19" r="5.5"/></g></symbol>
+    <symbol id="i-clock" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="24" cy="24" r="18"/><path d="M24 13v11l7 5"/></g></symbol>
+    <symbol id="i-fb" viewBox="0 0 24 24"><path fill="currentColor" d="M13.5 22v-8.2h2.8l.4-3.2h-3.2V8.5c0-.9.3-1.6 1.6-1.6h1.7V4.1c-.3 0-1.3-.1-2.5-.1-2.5 0-4.1 1.5-4.1 4.2v2.4H7.4v3.2h2.8V22z"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path fill="currentColor" d="M17.8 3h3.1l-6.8 7.7 8 10.3h-6.3l-4.9-6.4L5.3 21H2.2l7.2-8.3L1.8 3h6.4l4.4 5.9zm-1.1 16.2h1.7L7.4 4.7H5.6z"/></symbol>
+    <symbol id="i-ig" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r=".6" fill="currentColor"/></g></symbol>
+    <symbol id="i-in" viewBox="0 0 24 24"><path fill="currentColor" d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.6 4.8 6V21h-4v-5.2c0-1.3 0-2.9-1.8-2.9s-2 1.4-2 2.8V21h-4z"/></symbol>
+    <symbol id="i-pause" viewBox="0 0 32 32"><g fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="16" cy="16" r="14"/><path d="M13 11v10M19 11v10" stroke-linecap="round"/></g></symbol>
+    <symbol id="i-play" viewBox="0 0 32 32"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><circle cx="16" cy="16" r="14"/><path d="M13 10.5v11l9-5.5z"/></g></symbol>
+    <symbol id="i-menu" viewBox="0 0 32 32"><path d="M4 10h24M4 16h24M10 22h18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-close" viewBox="0 0 32 32"><path d="M8 8l16 16M24 8 8 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+  </defs>
+</svg>
+
+<header class="site-header">
+  <div class="topbar">
+    <div class="wrap">
+      <span class="tag">Builders | Homes | Lettings</span>
+      <span><a href="tel:01228520352">Call 01228 520352</a> &nbsp;|&nbsp; <a href="https://vtopenview.com/User/TenantLogin/BB0F0356-0BA3-4D92-83C6-E89358086835" rel="noopener" target="_blank">Tenant login<span class="sr-only"> (opens in a new tab)</span></a></span>
+    </div>
+  </div>
+  <div class="wrap">
+    <nav class="nav" aria-label="Main">
+      <a class="brand" href="#home" aria-label="McKnight, home"><img src="assets/logos/mcknight-logo-light.svg" alt="McKnight" width="200" height="75"></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-menu">
+        <svg aria-hidden="true"><use href="#i-menu"/></svg><span class="sr-only">Open menu</span>
+      </button>
+      <ul class="menu" id="primary-menu">
+        <li><a href="#home" aria-current="page">Home</a></li>
+        <li><a href="#for-sale">For Sale</a></li>
+        <li><a href="#lettings">To Let</a></li>
+        <li><a href="#students">Student Rentals</a></li>
+        <li><a href="#construction">Construction</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+
+<!-- HERO -->
+<section class="hero" id="home" aria-labelledby="hero-title">
+  <video id="hero-video" autoplay muted loop playsinline preload="metadata" poster="assets/video/hero-poster.webp" aria-hidden="true" tabindex="-1">
+    <source src="assets/video/hero-mobile.mp4" type="video/mp4" media="(max-width: 767px)">
+    <source src="assets/video/hero.mp4" type="video/mp4">
+  </video>
+  <div class="hero-inner">
+    <p class="eyebrow">Carlisle builders since 1965</p>
+    <h1 id="hero-title">Quality stands the test of time</h1>
+    <p>An independent, family run builder creating luxury homes, quality lettings and lasting construction work across Cumbria.</p>
+    <div class="hero-ctas">
+      <a class="btn btn-gold" href="#for-sale">Find your home</a>
+      <a class="btn btn-ghost" href="#construction">Our construction work</a>
+    </div>
+  </div>
+  <button class="video-toggle" type="button" aria-pressed="false" id="video-toggle">
+    <svg aria-hidden="true"><use href="#i-pause"/></svg><span class="label">Pause background video</span>
+  </button>
+</section>
+
+<!-- INTRO + STATS -->
+<section class="section on-light" aria-labelledby="intro-title">
+  <div class="wrap">
+    <div class="intro-grid">
+      <div>
+        <p class="eyebrow">Building quality homes since 1965</p>
+        <h2 id="intro-title">Family values at the heart of everything we build</h2>
+      </div>
+      <p class="lead">We pride ourselves on building homes to the highest standard. As an independently owned company, transparency, pride and passion can be found in everything we do.</p>
+    </div>
+    <ul class="stats" role="list">
+      <li class="stat"><b data-count="300">300</b><span>Quality homes built</span></li>
+      <li class="stat"><b data-count="1000" data-suffix="s">1,000s</b><span>Of satisfied customers</span></li>
+      <li class="stat"><b data-count="55" data-suffix="+">55+</b><span>Years experience</span></li>
+      <li class="stat"><b data-count="70">70</b><span>Students housed each year</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about on-light" id="about" aria-labelledby="about-title">
+  <figure>
+    <img src="assets/img/team-groundworks.webp" srcset="assets/img/team-groundworks-800.webp 800w, assets/img/team-groundworks.webp 1600w" sizes="(max-width:900px) 100vw, 50vw" alt="A McKnight site worker in hi-vis measuring timber beside a digger on a new housing development" loading="lazy" width="1600" height="1065">
+  </figure>
+  <div class="copy">
+    <p class="eyebrow">About us</p>
+    <h2 id="about-title">One of Cumbria's most prominent luxury home builders</h2>
+    <p>McKnight Homes is an independent Carlisle based company and one of Cumbria's most prominent luxury home developers. Over the years we have developed a reputation for an uncompromising approach to building exceptional homes that homeowners can trust.</p>
+    <p>Our developments are built in prime locations across the region, with each property uniquely designed to complement the outstanding aspects of the area. Whether we're breathing new life into old buildings or transforming pockets of Cumbria into remarkable countryside developments, our work is characterised by originality and expert craftsmanship.</p>
+    <p>Our experience, expertise and enthusiasm creates beautiful homes.</p>
+    <img class="stamp" src="assets/logos/mcknight-stamp-dark.svg" alt="McKnight and Son, established 1965" width="150" height="45" loading="lazy">
+  </div>
+</section>
+
+<!-- WHAT WE DO -->
+<section class="section dark" id="services" aria-labelledby="services-title">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">Our recent work</p>
+        <h2 id="services-title">Homes, rentals and construction under one roof</h2>
+      </div>
+      <p>From student houses near campus to full scale construction projects, the same family team looks after every stage.</p>
+    </div>
+    <div class="services">
+      <article class="service">
+        <figure><img src="assets/img/student-home-800.webp" alt="Bright furnished student living room with leather sofas and a guitar" loading="lazy" width="800" height="621"></figure>
+        <svg class="icon" aria-hidden="true"><use href="#i-student"/></svg>
+        <h3>Student accommodation</h3>
+        <p>A range of four, five and seven bedroom properties for students, all within walking distance of University of Cumbria campuses.</p>
+        <a class="link" href="#students">Student rentals <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </article>
+      <article class="service">
+        <figure><img src="assets/img/contractor-bedroom-800.webp" alt="Neat self contained bedroom with a double bed, desk and wardrobe" loading="lazy" width="800" height="450"></figure>
+        <svg class="icon" aria-hidden="true"><use href="#i-key"/></svg>
+        <h3>Contracted professionals</h3>
+        <p>Comfortable, affordable temporary accommodation for professionals looking to rent for anywhere from one week to one year.</p>
+        <a class="link" href="#lettings">View availability <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </article>
+      <article class="service">
+        <figure><img src="assets/img/team-site-800.webp" alt="Two McKnight builders in hi-vis working inside a blockwork shell" loading="lazy" width="800" height="531"></figure>
+        <svg class="icon" aria-hidden="true"><use href="#i-crane"/></svg>
+        <h3>Construction projects</h3>
+        <p>Support for every part of the construction process, working closely with engineers and architects to develop plans.</p>
+        <a class="link" href="#construction">Construction <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- FOR SALE / DEVELOPMENTS -->
+<section class="section on-light" id="for-sale" aria-labelledby="sale-title">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">Find your home</p>
+        <h2 id="sale-title">Do you want to live in a home built to perfection?</h2>
+      </div>
+      <p>Whether you're looking to buy or rent, we have properties in prime locations, from the hustle and bustle of the city to the idyllic countryside.</p>
+    </div>
+
+    <article class="dev">
+      <div class="media">
+        <img src="assets/img/points-house-1.webp" srcset="assets/img/points-house-1-800.webp 800w, assets/img/points-house-1.webp 1600w" sizes="(max-width:900px) 100vw, 58vw" alt="Detached brick and render family home with a double garage at The Points, Durdar" loading="lazy" width="1600" height="1068">
+        <img class="inset" src="assets/img/points-kitchen-800.webp" alt="Navy shaker kitchen with oak style flooring inside a Points show home" loading="lazy" width="800" height="531">
+      </div>
+      <div class="body">
+        <span class="status">Phase Two now reserving</span>
+        <h3>The Points, Durdar</h3>
+        <p>Luxury housing on a historic Carlisle site. Our newest development sits on Lady Dacre Road, named after Lady Dacre of Naworth, who donated the Carlisle gold bell first presented in 1559 to mark the beginning of racing in Carlisle.</p>
+        <p>Set opposite the racecourse in a semi rural location, The Points offers four house styles with a mix of three and four bedroom homes, just a few miles from the M6.</p>
+        <ul class="facts">
+          <li><span>Phase Two</span><span>21 houses</span></li>
+          <li><span>Bedrooms</span><span>3 and 4</span></li>
+          <li><span>House styles</span><span>4</span></li>
+          <li><span>Enquiries</span><span><a href="mailto:lesley@mcknightbuilders.co.uk">lesley@mcknightbuilders.co.uk</a></span></li>
+        </ul>
+        <a class="btn btn-dark" href="#contact">Reserve a property</a>
+      </div>
+    </article>
+
+    <article class="dev flip">
+      <div class="media">
+        <img src="assets/img/wetheral-spring-field-close.webp" srcset="assets/img/wetheral-spring-field-close-800.webp 800w, assets/img/wetheral-spring-field-close.webp 1600w" sizes="(max-width:900px) 100vw, 58vw" alt="White rendered executive eco home with a wide driveway at Spring Field Close, Wetheral" loading="lazy" width="1600" height="1067">
+        <img class="inset" src="assets/img/wetheral-bathroom-800.webp" alt="Marble tiled bathroom with a freestanding bath and brass towel rail" loading="lazy" width="800" height="533">
+      </div>
+      <div class="body">
+        <span class="status">Sold out</span>
+        <h3>Wetheral</h3>
+        <p>Two executive, eco friendly homes in the beautiful village of Wetheral on the bank of the River Eden. Built to passive design specifications with triple glazing and the highest grade of insulation, they use 90% less energy than a standard home.</p>
+        <ul class="facts">
+          <li><span>Spring Field Close</span><span>£950,000, Sold</span></li>
+          <li><span>Bedrooms</span><span>5 plus studio</span></li>
+          <li><span>Features</span><span>Quartz worktops, double height hall</span></li>
+        </ul>
+        <a class="btn btn-dark" href="#contact">Register interest</a>
+      </div>
+    </article>
+
+    <div class="plots">
+      <div class="plot">
+        <h4>The Cumrew, Plot 1</h4>
+        <p>The Points. Four bedroom detached house, 165.5 sq m (1,781 sq ft), driveway, single garage and large back garden. Freehold.</p>
+        <strong>Reserved</strong>
+      </div>
+      <div class="plot">
+        <h4>The Blencarn, Plots 2 and 4</h4>
+        <p>The Points. Part of our luxury collection set in outstanding countryside close to Carlisle.</p>
+        <strong>Enquire for availability</strong>
+      </div>
+      <div class="plot">
+        <h4>Red Cat House</h4>
+        <p>Four bedroom, two reception detached house. Offers over £300,000.</p>
+        <strong>Under offer</strong>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONSTRUCTION -->
+<section class="section dark" id="construction" aria-labelledby="cons-title">
+  <div class="wrap">
+    <div class="cons-top">
+      <div>
+        <p class="eyebrow">Construction</p>
+        <h2 id="cons-title">Trusted builders for more than 55 years</h2>
+      </div>
+      <div>
+        <p>McKnight is an independent Carlisle based company with decades of construction experience across the country. Our award winning teams have worked on bespoke homes, community buildings and commercial properties such as hotels. No matter how big or small your project, our specialists will see it completed to the highest standard.</p>
+        <ul class="trade-list" aria-label="Construction services">
+          <li>Bespoke joinery</li><li>Damp proofing</li><li>Decorating</li><li>Maintenance</li>
+          <li>Brick work</li><li>Plumbing</li><li>Groundworks</li><li>Flooring</li>
+          <li>Structural</li><li>Roofing</li><li>Demolition</li><li>Extensions</li>
+        </ul>
+      </div>
+    </div>
+    <div class="pillars">
+      <div class="pillar">
+        <svg class="icon" aria-hidden="true"><use href="#i-plans"/></svg>
+        <div><h3>Main contractor</h3><p>We oversee every part of the build, working with engineers and architects to develop plans, set timelines and determine costs, so your project lands on time and on budget.</p></div>
+      </div>
+      <div class="pillar">
+        <svg class="icon" aria-hidden="true"><use href="#i-wrench"/></svg>
+        <div><h3>Property maintenance</h3><p>Maintenance and oversight of residential, commercial and land real estate. Talk to us about how we can manage your properties.</p></div>
+      </div>
+      <div class="pillar">
+        <svg class="icon" aria-hidden="true"><use href="#i-extension"/></svg>
+        <div><h3>Extensions</h3><p>A wealth of experience building high quality extensions, whether you want extra living space or a new garage. Ask us for a quote.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section class="section on-light" aria-labelledby="work-title">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">Our building portfolio</p>
+        <h2 id="work-title">From luxury estates to grand renovations</h2>
+      </div>
+      <p>Contact our construction manager at <a href="mailto:gary@mcknightbuilders.co.uk">gary@mcknightbuilders.co.uk</a> to involve us in your next project.</p>
+    </div>
+    <div class="portfolio">
+      <figure class="work w-a">
+        <img src="assets/img/garth-house-castle.webp" srcset="assets/img/garth-house-castle-800.webp 800w, assets/img/garth-house-castle.webp 1600w" sizes="(max-width:900px) 100vw, 66vw" alt="Newly built sandstone castle with a crenellated tower lit at dusk" loading="lazy" width="1600" height="1116">
+        <figcaption><h3>Garth House</h3><p>A castle built as holiday accommodation on the outskirts of Brampton, believed to be the first castle built during King Charles III's reign.</p></figcaption>
+      </figure>
+      <figure class="work w-b">
+        <img src="assets/img/points-street-800.webp" alt="Row of new brick homes with solar panels at The Points, Durdar" loading="lazy" width="800" height="532">
+        <figcaption><h3>The Points, Durdar</h3><p>A luxury development of three and four bedroom homes opposite Carlisle racecourse.</p></figcaption>
+      </figure>
+      <figure class="work w-c">
+        <img src="assets/img/recent-project-club.webp" alt="Traditional stone and render community building on a Carlisle street" loading="lazy" width="600" height="450">
+        <figcaption><h3>Denton Holme Conservative Club</h3><p>Full strip out, redesign and refit after a flood, including new bar, seating and air conditioning.</p></figcaption>
+      </figure>
+      <figure class="work w-d">
+        <img src="assets/img/wetheral-render-3-800.webp" alt="White eco home with solar panels and a curved driveway in Wetheral" loading="lazy" width="800" height="450">
+        <figcaption><h3>Wetheral eco homes</h3><p>Two passive design executive homes using 90% less energy than a standard home.</p></figcaption>
+      </figure>
+      <figure class="work w-e">
+        <img src="assets/img/points-lounge-800.webp" alt="Show home lounge with cream sofas and a feature fireplace" loading="lazy" width="800" height="531">
+        <figcaption><h3>Show home interiors</h3><p>Finished to the same exacting standard inside as out.</p></figcaption>
+      </figure>
+    </div>
+    <ul class="more-work">
+      <li><h3>Farlam Hall</h3><p>Stable cottages refurbished, roof renewed, a new sandstone entrance, restored windows and shutters, resurfaced roads and new car parks for the hotel.</p></li>
+      <li><h3>Morton School science labs</h3><p>Three science labs at Richard Rose Morton Academy remodelled during the 2022 summer holidays.</p></li>
+      <li><h3>Former Prince of Wales pub site</h3><p>A Denton Holme site disused for over ten years transformed into a car park, with a new gable wall, sandstone copings and raised beds.</p></li>
+    </ul>
+  </div>
+</section>
+
+<!-- LETTINGS -->
+<section class="section on-light" id="lettings" aria-labelledby="let-title" style="background:var(--stone)">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">Properties to let</p>
+        <h2 id="let-title">Quality lettings in Carlisle</h2>
+      </div>
+      <p>High standard properties with a quick, efficient and hassle free maintenance service. We've been developing rental properties you can trust since 1965.</p>
+    </div>
+    <div class="lettings">
+      <article class="let">
+        <img src="assets/img/residential-high-bell-garth-800.webp" alt="White semi detached bungalow with a block paved driveway" loading="lazy" width="800" height="600">
+        <div class="inner"><h3>Residential properties</h3><p>Quality homes across Cumbria for families, individuals and couples. With over 55 years experience, we can find your perfect home.</p><a class="link" href="#contact">View properties <svg aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+      </article>
+      <article class="let">
+        <img src="assets/img/student-bedroom-800.webp" alt="Furnished bedroom with yellow cushions and bedside lamps" loading="lazy" width="800" height="532">
+        <div class="inner"><h3>Contracted professionals</h3><p>Self contained rooms on short and long leases, ideal for healthcare workers and contractors needing a base in the area.</p><a class="link" href="#contact">View availability <svg aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+      </article>
+      <article class="let">
+        <img src="assets/img/commercial-mitchell-dryers-800.webp" alt="Three storey commercial office building with a car park" loading="lazy" width="800" height="472">
+        <div class="inner"><h3>Commercial lettings</h3><p>Two storey offices or retail units, with a large library of Carlisle commercial properties ready for short or long leases.</p><a class="link" href="#listings">See listings <svg aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+      </article>
+      <article class="let">
+        <img src="assets/img/airbnb-apartment-800.webp" alt="Open plan apartment kitchen and lounge with a grey sofa" loading="lazy" width="800" height="534">
+        <div class="inner"><h3>Short stays</h3><p>A well appointed two bedroom apartment close to Carlisle city centre, plus a cosy high rise apartment in Wetheral, for city breaks and short lets.</p><a class="link" href="https://www.airbnb.co.uk/" rel="noopener" target="_blank">Book on Airbnb<span class="sr-only"> (opens in a new tab)</span> <svg aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+      </article>
+    </div>
+
+    <div class="listings" id="listings">
+      <h3>Currently available</h3>
+      <div class="table-wrap" role="region" aria-labelledby="listings-caption" tabindex="0">
+        <table>
+          <caption id="listings-caption" class="sr-only">Commercial, residential and student properties currently listed</caption>
+          <thead><tr><th scope="col">Property</th><th scope="col">Type</th><th scope="col">Size</th><th scope="col">Price</th><th scope="col">Status</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Unit 15, Denton Ironworks</th><td>Health, industrial, leisure, office, retail</td><td>2,200 sq ft</td><td class="price">£12,800 pa</td><td>To let</td></tr>
+            <tr><th scope="row">38 Denton Street, Denton Holme</th><td>Investment, office, retail</td><td>350 sq ft</td><td class="price">£650 pcm</td><td>To let</td></tr>
+            <tr><th scope="row">Office space in McKnight House</th><td>Office</td><td>Single office</td><td class="price">£450 pcm</td><td>To let</td></tr>
+            <tr><th scope="row">29 John Street, Caldewgate, CA2 5TR</th><td>Commercial</td><td>Ask us</td><td class="price">£9,000 pa</td><td>To let</td></tr>
+            <tr><th scope="row">Mitchell Dryers</th><td>Industrial, investment, motoring, office</td><td>Ask us</td><td class="price">POA</td><td>To let</td></tr>
+            <tr><th scope="row">Flat 2 Stanley Hall</th><td>Student apartment</td><td>7 bed, 2 bath</td><td class="price">£115 pppw</td><td>To let</td></tr>
+            <tr><th scope="row">10 High Bell Garth, Low Hesket, CA4 0JB</th><td>Semi detached bungalow</td><td>2 bed, 1 bath</td><td class="price">£950 pcm</td><td>Let</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STUDENTS -->
+<section class="section on-light" id="students" aria-labelledby="stu-title">
+  <div class="wrap students">
+    <div class="media">
+      <img src="assets/img/student-lounge.webp" srcset="assets/img/student-lounge-800.webp 800w, assets/img/student-lounge.webp 1600w" sizes="(max-width:900px) 100vw, 40vw" alt="Modern student lounge with two grey sofas, a patterned rug and a large mirror" loading="lazy" width="1600" height="1064">
+    </div>
+    <div>
+      <p class="eyebrow">Student rentals</p>
+      <h2 id="stu-title">Close to campus, with everything you need</h2>
+      <p style="margin-top:24px">We're proud to offer high quality accommodation to students at the University of Cumbria. Our properties come furnished and equipped for university life, in the only city in Cumbria, with the countryside right on your doorstep.</p>
+      <div class="features">
+        <div class="feature"><svg class="icon" aria-hidden="true"><use href="#i-support"/></svg><h3>24/7 support</h3><p>Free access to a 24 hour helpline for emergencies, whether you need a locksmith, a plumber or the police.</p></div>
+        <div class="feature"><svg class="icon" aria-hidden="true"><use href="#i-sofa"/></svg><h3>Furnished</h3><p>Wardrobes, sofas and TVs included. Save yourself the flat pack trip this year.</p></div>
+        <div class="feature"><svg class="icon" aria-hidden="true"><use href="#i-bills"/></svg><h3>Bills included</h3><p>Water, heating and high speed internet are all included in the price.</p></div>
+        <div class="feature"><svg class="icon" aria-hidden="true"><use href="#i-wifi"/></svg><h3>Wi-Fi</h3><p>Fast, reliable internet from the day you move in.</p></div>
+        <div class="feature"><svg class="icon" aria-hidden="true"><use href="#i-cctv"/></svg><h3>Monitored CCTV</h3><p>Recording facilities you can rely on, 24 hours a day, 7 days a week.</p></div>
+        <div class="feature"><svg class="icon" aria-hidden="true"><use href="#i-modern"/></svg><h3>Clean and modern</h3><p>We regularly replace the electronics and white goods in our student homes.</p></div>
+        <div class="feature"><svg class="icon" aria-hidden="true"><use href="#i-kitchen"/></svg><h3>Full amenities</h3><p>Energy efficient dishwashers, fridge freezers, washers and dryers. No more pay by the minute laundry.</p></div>
+        <div class="feature"><svg class="icon" aria-hidden="true"><use href="#i-clean"/></svg><h3>Cleaning service</h3><p>Our team cleans communal areas every week. Bedrooms are still down to you.</p></div>
+      </div>
+      <p style="margin-top:44px"><a class="btn btn-dark" href="#contact">Reserve a student house</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="section dark" id="reviews" aria-labelledby="rev-title">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">In their words</p>
+        <h2 id="rev-title">Built by a family, for a family</h2>
+      </div>
+    </div>
+    <div class="reviews">
+      <figure class="review r-1">
+        <svg class="q" aria-hidden="true"><use href="#i-quote"/></svg>
+        <blockquote><p>We bought the house from McKnight's and immediately realised we had not just bought a house, we had bought a home. The quality of the build was exemplary and the proof is seen over time. There have been no issues and we love living here.</p></blockquote>
+        <figcaption>Sue and Paul<span>Homeowners</span></figcaption>
+      </figure>
+      <figure class="review r-2">
+        <svg class="q" aria-hidden="true"><use href="#i-quote"/></svg>
+        <blockquote><p>The workmanship, attention to detail and support from all the experienced workforce was carried out with courteous professionalism. We were never left alone, and they never left without our assurance that we were happy with their work. A joy.</p></blockquote>
+        <figcaption>Peter and Elizabeth Bart-Smith<span>Homeowners, Aglionby</span></figcaption>
+      </figure>
+      <figure class="review r-3">
+        <svg class="q" aria-hidden="true"><use href="#i-quote"/></svg>
+        <blockquote><p>My wife, kids and I love our four bed barn conversion and the process was so easy. McKnight &amp; Son could not have been more helpful.</p></blockquote>
+        <figcaption>Harry Jacobs<span>Tenant</span></figcaption>
+      </figure>
+      <figure class="review r-4">
+        <svg class="q" aria-hidden="true"><use href="#i-quote"/></svg>
+        <blockquote><p>Absolutely fantastic. Cannot thank McKnight &amp; Son enough for making our move to the new office space an absolute dream.</p></blockquote>
+        <figcaption>Martha Aoe<span>Commercial tenant</span></figcaption>
+      </figure>
+      <figure class="review r-5">
+        <svg class="q" aria-hidden="true"><use href="#i-quote"/></svg>
+        <blockquote><p>My friends and I were worried our student house would be a nightmare to get, but McKnight &amp; Son made it super easy and talked us through everything.</p></blockquote>
+        <figcaption>Carla O'Brien<span>Student tenant</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- NEWS -->
+<section class="section on-light" id="news" aria-labelledby="news-title">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">News</p>
+        <h2 id="news-title">The latest from McKnight</h2>
+      </div>
+      <a class="link" href="#news">All news <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    </div>
+    <div class="news">
+      <article class="post">
+        <img src="assets/img/points-house-2-800.webp" alt="Pair of new detached homes at The Points under a blue sky" loading="lazy" width="800" height="534">
+        <time datetime="2025-10-24">24 October 2025</time>
+        <h3><a href="#news">Work commences on Phase Two of The Points in Durdar</a></h3>
+        <p>Work has started on Phase Two of our luxury development in this sought after semi rural location.</p>
+      </article>
+      <article class="post">
+        <img src="assets/img/news-english-street-800.webp" alt="Renovated retail frontage on English Street in Carlisle city centre" loading="lazy" width="800" height="792">
+        <time datetime="2025-10-15">15 October 2025</time>
+        <h3><a href="#news">Latest commercial renovation complete in Carlisle City Centre</a></h3>
+        <p>The iconic former House of Fraser building on English Street has been fully stripped out and renovated.</p>
+      </article>
+      <article class="post">
+        <img src="assets/img/news-award-800.webp" alt="Rows of gold building award trophies on a table" loading="lazy" width="800" height="533">
+        <time datetime="2023-05-24">24 May 2023</time>
+        <h3><a href="#news">Prestigious double for Carlisle builder McKnight</a></h3>
+        <p>McKnight &amp; Son Builders named the North's top house builder for the second successive time.</p>
+      </article>
+      <article class="post">
+        <img src="assets/img/news-christmas-trees-800.webp" alt="Two McKnight team members loading Christmas trees into a company van" loading="lazy" width="800" height="533">
+        <time datetime="2023-01-25">25 January 2023</time>
+        <h3><a href="#news">Christmas tree collection breaks new record</a></h3>
+        <p>Over 1,300 trees collected across Carlisle and north Cumbria in support of Hospice at Home.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ACCREDITATIONS -->
+<section class="accred" aria-labelledby="acc-title">
+  <div class="wrap">
+    <h2 id="acc-title">Our accreditations</h2>
+    <ul>
+      <li><a href="https://www.safecontractor.com/" rel="noopener" target="_blank"><img src="assets/logos/safe-contractor-approved.svg" alt="SafeContractor approved (opens in a new tab)" width="56" height="56" loading="lazy"></a></li>
+      <li><a href="https://www.nhbc.co.uk/" rel="noopener" target="_blank"><img src="assets/logos/nhbc.svg" alt="NHBC registered builder (opens in a new tab)" width="122" height="56" loading="lazy"></a></li>
+      <li><a href="https://www.constructionline.co.uk/" rel="noopener" target="_blank"><img src="assets/logos/constructionline.svg" alt="Constructionline member (opens in a new tab)" width="140" height="56" loading="lazy"></a></li>
+      <li><a href="https://www.fmb.org.uk/" rel="noopener" target="_blank"><img src="assets/logos/federation-of-master-builders.svg" alt="Federation of Master Builders member (opens in a new tab)" width="34" height="56" loading="lazy"></a></li>
+      <li><img class="tpo" src="assets/img/tpo-tsi-logos-800.webp" alt="The Property Ombudsman and Trading Standards approved code" width="180" height="46" loading="lazy"></li>
+    </ul>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section on-light" id="contact" aria-labelledby="contact-title">
+  <div class="wrap contact">
+    <div>
+      <p class="eyebrow">Contact us</p>
+      <h2 id="contact-title">Got a question? Get in touch</h2>
+      <p style="margin-top:24px">For anything about our homes, lettings or construction services, send us a message and the right team will get back to you.</p>
+      <ul class="contact-list">
+        <li><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg><div><h3>Head office</h3><address style="font-style:normal">McKnight &amp; Son, McKnight House<br>Junction Street, Carlisle CA2 5WH</address></div></li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg><div><h3>Office</h3><p><a href="tel:01228520352">01228 520 352</a></p></div></li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg><div><h3>Departments</h3><p>Lettings and new builds: <a href="mailto:lettings@mcknightproperties.co.uk">lettings@mcknightproperties.co.uk</a><br>Construction: <a href="mailto:gary@mcknightbuilders.co.uk">gary@mcknightbuilders.co.uk</a></p></div></li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg><div><h3>Office hours</h3><p>Monday to Friday, 7:30am to 4:30pm</p></div></li>
+      </ul>
+    </div>
+    <form id="contact-form" novalidate aria-describedby="form-note">
+      <div class="row">
+        <div class="field">
+          <label for="f-name">Name <span class="req">(required)</span></label>
+          <input id="f-name" name="name" type="text" autocomplete="name" required aria-describedby="e-name">
+          <p class="error" id="e-name">Please enter your name.</p>
+        </div>
+        <div class="field">
+          <label for="f-email">Email <span class="req">(required)</span></label>
+          <input id="f-email" name="email" type="email" autocomplete="email" required aria-describedby="e-email">
+          <p class="error" id="e-email">Please enter a valid email address.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="field">
+          <label for="f-phone">Phone</label>
+          <input id="f-phone" name="phone" type="tel" autocomplete="tel">
+        </div>
+        <div class="field">
+          <label for="f-type">Enquiry type <span class="req">(required)</span></label>
+          <select id="f-type" name="type" required aria-describedby="e-type">
+            <option value="">Choose one</option>
+            <option>Homes</option><option>Lettings</option><option>Student lettings</option><option>Construction</option><option>Other</option>
+          </select>
+          <p class="error" id="e-type">Please choose an enquiry type.</p>
+        </div>
+      </div>
+      <div class="field">
+        <label for="f-msg">Message <span class="req">(required)</span></label>
+        <textarea id="f-msg" name="message" required aria-describedby="e-msg"></textarea>
+        <p class="error" id="e-msg">Please enter a message.</p>
+      </div>
+      <button class="btn btn-dark" type="submit">Send enquiry</button>
+      <p class="form-note" id="form-note">We'll only use your details to reply to your enquiry. See our <a href="https://mcknight-homes.co.uk/privacy-policy/">privacy policy</a>.</p>
+      <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <img class="logo" src="assets/logos/mcknight-logo-light.svg" alt="McKnight" width="190" height="71" loading="lazy">
+        <address>McKnight &amp; Son<br>McKnight House<br>Junction Street<br>Carlisle CA2 5WH</address>
+        <div class="social">
+          <a href="https://www.facebook.com/mcknightandsonbuilders/" rel="noopener" target="_blank"><svg aria-hidden="true"><use href="#i-fb"/></svg><span class="sr-only">McKnight on Facebook (opens in a new tab)</span></a>
+          <a href="https://twitter.com/mcknightbuilder" rel="noopener" target="_blank"><svg aria-hidden="true"><use href="#i-x"/></svg><span class="sr-only">McKnight on X (opens in a new tab)</span></a>
+          <a href="https://www.instagram.com/mcknightandsonbuilders/" rel="noopener" target="_blank"><svg aria-hidden="true"><use href="#i-ig"/></svg><span class="sr-only">McKnight on Instagram (opens in a new tab)</span></a>
+          <a href="https://www.linkedin.com/company/mcknight-son-builders/" rel="noopener" target="_blank"><svg aria-hidden="true"><use href="#i-in"/></svg><span class="sr-only">McKnight on LinkedIn (opens in a new tab)</span></a>
+        </div>
+      </div>
+      <nav aria-label="Footer">
+        <h2>Menu</h2>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#for-sale">Properties for sale</a></li>
+          <li><a href="#lettings">Properties to let</a></li>
+          <li><a href="#students">Student rentals</a></li>
+          <li><a href="#construction">Construction</a></li>
+          <li><a href="#news">News</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h2>Office hours</h2>
+        <p>Monday to Friday<br>7:30am to 4:30pm</p>
+        <h2 style="margin-top:28px">Information</h2>
+        <ul>
+          <li><a href="https://mcknight-homes.co.uk/privacy-policy/">Privacy policy</a></li>
+          <li><a href="https://mcknight-homes.co.uk/wp-content/uploads/McKnight-In-House-Complaints-Proceedure.pdf">Complaints procedure (PDF)</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Contact us</h2>
+        <ul>
+          <li>Office: <a href="tel:01228520352">01228 520 352</a></li>
+          <li>Lettings: <a href="mailto:lettings@mcknightproperties.co.uk">lettings@mcknightproperties.co.uk</a></li>
+          <li>New builds: <a href="mailto:lettings@mcknightproperties.co.uk">lettings@mcknightproperties.co.uk</a></li>
+          <li>Construction: <a href="mailto:gary@mcknightbuilders.co.uk">gary@mcknightbuilders.co.uk</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal">
+      <span>&copy; <span id="year">2025</span> McKnight and Son. All rights reserved.</span>
+      <button type="button" id="cookie-reopen">Cookie settings</button>
+    </div>
+  </div>
+</footer>
+
+<!-- COOKIE CONSENT (side panel, non modal) -->
+<section class="cookie" id="cookie" role="region" aria-labelledby="cookie-title" hidden>
+  <h2 id="cookie-title">We value your privacy</h2>
+  <p>We use essential cookies to make this site work. With your permission we'd also like to use analytics cookies to understand how the site is used. You can change your mind at any time.</p>
+  <fieldset class="prefs" id="cookie-prefs" hidden>
+    <legend>Cookie preferences</legend>
+    <div class="pref"><input type="checkbox" id="c-essential" checked disabled><label for="c-essential">Essential<small>Needed for the site to work. Always on.</small></label></div>
+    <div class="pref"><input type="checkbox" id="c-analytics"><label for="c-analytics">Analytics<small>Helps us improve the site.</small></label></div>
+    <div class="pref"><input type="checkbox" id="c-marketing"><label for="c-marketing">Marketing<small>Used for relevant adverts on other sites.</small></label></div>
+  </fieldset>
+  <div class="actions">
+    <button class="btn btn-dark" type="button" data-cookie="accept">Accept all</button>
+    <button class="btn btn-line" type="button" data-cookie="reject">Reject optional</button>
+    <button class="btn btn-line" type="button" data-cookie="manage" aria-expanded="false" aria-controls="cookie-prefs">Manage</button>
+  </div>
+</section>
+
+<script>
+(function(){
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* mobile menu */
+  var toggle = document.querySelector('.menu-toggle'), menu = document.getElementById('primary-menu');
+  function setMenu(open){
+    toggle.setAttribute('aria-expanded', open);
+    menu.classList.toggle('open', open);
+    toggle.querySelector('use').setAttribute('href', open ? '#i-close' : '#i-menu');
+    toggle.querySelector('.sr-only').textContent = open ? 'Close menu' : 'Open menu';
+    document.body.style.overflow = open ? 'hidden' : '';
+    ['main','footer','.topbar','.brand'].forEach(function(sel){ var el = document.querySelector(sel); if(el) el.inert = open; });
+    if(open){ menu.querySelector('a').focus(); }
+  }
+  toggle.addEventListener('click', function(){ setMenu(toggle.getAttribute('aria-expanded') !== 'true'); });
+  menu.addEventListener('click', function(e){ if(e.target.closest('a') && menu.classList.contains('open')) setMenu(false); });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape' && menu.classList.contains('open')){ setMenu(false); toggle.focus(); } });
+
+  /* hero video: pause control (WCAG 2.2.2) and reduced motion */
+  var video = document.getElementById('hero-video'), vbtn = document.getElementById('video-toggle');
+  function setPlaying(play){
+    if(play){ var p = video.play(); if(p && p.catch) p.catch(function(){}); } else { video.pause(); }
+    vbtn.setAttribute('aria-pressed', String(!play));
+    vbtn.querySelector('use').setAttribute('href', play ? '#i-pause' : '#i-play');
+    vbtn.querySelector('.label').textContent = play ? 'Pause background video' : 'Play background video';
+  }
+  if(reduce){ video.removeAttribute('autoplay'); setPlaying(false); }
+  vbtn.addEventListener('click', function(){ setPlaying(video.paused); });
+
+  /* stat counters (final values are already in the markup) */
+  var stats = document.querySelectorAll('[data-count]');
+  if(!reduce && 'IntersectionObserver' in window){
+    var fmt = function(n){ return n.toLocaleString('en-GB'); };
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(!en.isIntersecting) return;
+        var el = en.target, to = +el.dataset.count, suf = el.dataset.suffix || '', t0 = null, dur = 1400;
+        el.setAttribute('aria-label', fmt(to) + suf);
+        (function step(ts){ if(!t0) t0 = ts; var k = Math.min((ts - t0) / dur, 1), e = 1 - Math.pow(1 - k, 3);
+          el.textContent = fmt(Math.round(to * e)) + suf; if(k < 1) requestAnimationFrame(step); })(performance.now());
+        io.unobserve(el);
+      });
+    }, {threshold:.5});
+    stats.forEach(function(s){ io.observe(s); });
+  }
+
+  /* contact form validation (mockup: no submission) */
+  var form = document.getElementById('contact-form'), status = document.getElementById('form-status');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var first = null;
+    [['f-name','e-name'],['f-email','e-email'],['f-type','e-type'],['f-msg','e-msg']].forEach(function(p){
+      var f = document.getElementById(p[0]), err = document.getElementById(p[1]);
+      var ok = f.value.trim() !== '' && (f.type !== 'email' || /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(f.value));
+      f.setAttribute('aria-invalid', String(!ok)); err.classList.toggle('show', !ok);
+      if(!ok && !first) first = f;
+    });
+    if(first){ status.textContent = 'Please fix the highlighted fields.'; first.focus(); return; }
+    status.textContent = 'Thank you. Your enquiry has been sent successfully.';
+    form.reset();
+  });
+
+  /* cookie consent */
+  var panel = document.getElementById('cookie'), prefs = document.getElementById('cookie-prefs'),
+      manage = panel.querySelector('[data-cookie="manage"]'), KEY = 'mck-consent';
+  function read(){ try { return JSON.parse(localStorage.getItem(KEY)); } catch(e){ return null; } }
+  function save(v){ try { localStorage.setItem(KEY, JSON.stringify(v)); } catch(e){} }
+  function open(){ panel.hidden = false; requestAnimationFrame(function(){ panel.classList.add('show'); }); }
+  function close(){ panel.classList.remove('show'); setTimeout(function(){ panel.hidden = true; }, reduce ? 0 : 450); }
+  panel.addEventListener('click', function(e){
+    var b = e.target.closest('[data-cookie]'); if(!b) return;
+    var a = b.dataset.cookie;
+    if(a === 'manage'){
+      var show = prefs.hidden; prefs.hidden = !show; manage.setAttribute('aria-expanded', String(show));
+      manage.textContent = show ? 'Save choices' : 'Manage';
+      if(!show) { save({analytics:document.getElementById('c-analytics').checked, marketing:document.getElementById('c-marketing').checked, t:Date.now()}); close(); }
+      return;
+    }
+    save({analytics:a === 'accept', marketing:a === 'accept', t:Date.now()}); close();
+  });
+  document.getElementById('cookie-reopen').addEventListener('click', function(){
+    var v = read() || {}; document.getElementById('c-analytics').checked = !!v.analytics; document.getElementById('c-marketing').checked = !!v.marketing;
+    open(); panel.querySelector('button').focus();
+  });
+  if(!read()) setTimeout(open, 900);
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
